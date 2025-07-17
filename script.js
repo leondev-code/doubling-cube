@@ -19,7 +19,8 @@ function double() {
     } else {
         Value *= 2; update();
     }} else {
+        
+        alert("Double not accepted. Opponent got "+ Value +" point"+ (Value > 1 ? "s." : "."));
         Value = 1; update(); document.getElementById("helper").style.visibility = "visible";
-        alert("Double not accepted. Opponent got one point.");
     }
 }
