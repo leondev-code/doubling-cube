@@ -13,9 +13,13 @@ function update() {
 }
 function double() {
     document.getElementById("helper").style.visibility = "hidden";
+    if (confirm("Do you want to accept the double?")) {
     if (Value==64) {
         alert("Cube already at 64! Cannot double anymore. Reset if you want to start over.");
     } else {
         Value *= 2; update();
+    }} else {
+        
+        Value = 1; update(); document.getElementById("helper").style.visibility = "visible";
     }
 }
